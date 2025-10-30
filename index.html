@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="pl">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Poradnik: System Klanów</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <header>
+        <div class="header-top">
+            <h1 data-i18n="header.h1">System Klanów – poradnik</h1>
+            <div id="language-switcher" aria-label="Language switcher">
+                <span id="language-label">Language:</span>
+                <button id="lang-en" class="lang-button" data-lang="en" aria-pressed="false" title="English">
+                    <img src="https://flagicons.lipis.dev/flags/4x3/gb.svg" alt="English">
+                </button>
+                <button id="lang-pl" class="lang-button" data-lang="pl" aria-pressed="true" title="Polish">
+                    <img src="https://flagicons.lipis.dev/flags/4x3/pl.svg" alt="Polish">
+                </button>
+            </div>
+        </div>
+        <p data-i18n="header.p">Poniższe opcje otworzysz komendą <span class="kbd">/klan</span> lub przez <b>menu</b>
+            Moda!</p>
+    </header>
+
+    <main>
+        <!-- Główne menu -->
+        <section class="section" id="glowne-menu">
+            <h2 data-i18n="glowne-menu.h2">Główne przyciski klanów</h2>
+            <div class="row">
+                <div>
+                    <img src="/images/systemKlanow.png" alt="System klanów - menu główne" />
+                </div>
+                <div>
+                    <div class="grid">
+                        <div class="card">
+                            <h3 data-i18n="card.1.title">1. Mój klan</h3>
+                            <p data-i18n="card.1.desc">Centrum zarządzania Twoim klanem: członkowie, punkty, wojny.</p>
+                        </div>
+                        <div class="card">
+                            <h3 data-i18n="card.2.title">2. Lista wszystkich klanów</h3>
+                            <p data-i18n="card.2.desc">Lista wszystkich klanów; wybierz, aby zobaczyć szczegóły.</p>
+                        </div>
+                        <div class="card">
+                            <h3 data-i18n="card.3.title">3. Ranking klanów</h3>
+                            <p data-i18n="card.3.desc">Motd z tabelą TOP – porównaj poziom i pozycje klanów.</p>
+                        </div>
+                        <div class="card">
+                            <h3 data-i18n="card.4.title">4. Pomoc i informacje</h3>
+                            <p data-i18n="card.4.desc">Ogólne informacje oraz zasady klanów.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mój klan -->
+        <section class="section" id="moj-klan">
+            <h2 data-i18n="moj-klan.h2">Mój klan</h2>
+            <div class="row">
+                <div>
+                    <img src="/images/mojKlan.png" alt="Mój klan - podmenu" />
+                </div>
+                <div class="grid">
+                    <div class="card">
+                        <h3 data-i18n="moj-klan.info.title">Informacje o klanie</h3>
+                        <ul>
+                            <li data-i18n="moj-klan.info.desc">Otwiera okno z danymi klanu: nazwa, właściciel,
+                                członkowie, poziom oraz dokonane ulepszenia.</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3 data-i18n="moj-klan.members.title">Członkowie klanu</h3>
+                        <ul>
+                            <li data-i18n="moj-klan.members.desc1">Informacje o klanie - lista członków oraz ich
+                                wpłacone monety.</li>
+                            <li data-i18n="moj-klan.members.desc2">Dodaj członka – zaproszenie do klanu.</li>
+                            <li data-i18n="moj-klan.members.desc3">Wyrzuć członka – usunięcie z klanu.</li>
+                            <li data-i18n="moj-klan.members.desc4">Zarządzaj rangami – konfiguracja uprawnień.</li>
+                            <li data-i18n="moj-klan.members.desc5">Oddaj szefostwo – przeniesienie własności.</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3 data-i18n="moj-klan.points.title">Punkty klanu</h3>
+                        <ul>
+                            <li data-i18n="moj-klan.points.desc1">Wpłać monety do klanu – wspólna kasa na ulepszenia.
+                            </li>
+                            <li data-i18n="moj-klan.points.desc2">Ulepszenia klanu – inwestuj w rozwój swojego klanu.
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3 data-i18n="moj-klan.wars.title">Wojny klanów</h3>
+                        <ul>
+                            <li data-i18n="moj-klan.wars.desc1">Wyzwij klan na wojnę – rozpocznij pojedynek.</li>
+                            <li data-i18n="moj-klan.wars.desc2">Blokada wojen – wyłącz otrzymywanie pojedynku.</li>
+                            <li data-i18n="moj-klan.wars.desc3">Motd z zasadami – punktacja, czas oraz nagrody.</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3 data-i18n="moj-klan.leave.title">Opuść klan</h3>
+                        <ul>
+                            <li data-i18n="moj-klan.leave.desc1">Natychmiastowe opuszczenie klanu.</li>
+                            <li data-i18n="moj-klan.leave.desc2">Właściciel powinien najpierw przekazać szefostwo.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ulepszenia / Punkty -->
+        <section class="section" id="ulepszenia">
+            <h2 data-i18n="ulepszenia.h2">Punkty i ulepszenia klanu</h2>
+            <div class="row">
+                <div>
+                    <img src="/images/Ulepszenia.png" alt="Punkty i ulepszenia klanu - ekran" />
+                </div>
+                <div>
+                    <div class="grid">
+                        <div class="card">
+                            <h3 data-i18n="ulepszenia.how.title">Jak to działa?</h3>
+                            <ul>
+                                <li data-i18n="ulepszenia.how.desc1">Punkty zdobywasz za każdy poziom klanu.</li>
+                                <li data-i18n="ulepszenia.how.desc2">Monety z kasy klanu służą do zakupu/aktywacji.</li>
+                            </ul>
+                        </div>
+                        <div class="card">
+                            <h3 data-i18n="ulepszenia.damage.title">Obrażenia</h3>
+                            <p data-i18n="ulepszenia.damage.desc">Stały procent do zadawanych obrażeń przez członków
+                                klanu.</p>
+                        </div>
+                        <div class="card">
+                            <h3 data-i18n="ulepszenia.resistance.title">Odporność</h3>
+                            <p data-i18n="ulepszenia.resistance.desc">Redukcja otrzymywanych obrażeń w walce.</p>
+                        </div>
+                        <div class="card">
+                            <h3 data-i18n="ulepszenia.xp.title">Bonus doświadczenia</h3>
+                            <p data-i18n="ulepszenia.xp.desc">Dodatkowy procent do zdobywanego doświadczenia.</p>
+                        </div>
+                        <div class="card">
+                            <h3 data-i18n="ulepszenia.coins.title">Bonus monet</h3>
+                            <p data-i18n="ulepszenia.coins.desc">Procentowy bonus do zdobywanych monet.</p>
+                        </div>
+                        <div class="card">
+                            <h3 data-i18n="ulepszenia.health.title">Zdrowie</h3>
+                            <p data-i18n="ulepszenia.health.desc">Płaski przyrost punktów zdrowia.</p>
+                        </div>
+                        <div class="card">
+                            <h3 data-i18n="ulepszenia.limit.title">Ilość członków</h3>
+                            <p data-i18n="ulepszenia.limit.desc">Podnosi maksymalny limit graczy w klanie.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Informacje -->
+        <section class="section" id="informacje">
+            <h2 data-i18n="informacje.h2">Ważne informacje</h2>
+            <div class="full">
+                <div>
+                    <ul class="info-list">
+                        <li data-i18n="informacje.li.1">Po utworzeniu klanu nie ma możliwości zmiany jego nazwy.</li>
+                        <li data-i18n="informacje.li.2">Wpłacone do klanu monety nie podlegają zwrotowi.</li>
+                        <li data-i18n="informacje.li.3">Klan mogą ulepszać wyłącznie Właściciel oraz Zastępca.</li>
+                        <li data-i18n="informacje.li.4">Aby założyć klan, gracz musi posiadać co najmniej X poziom oraz
+                            X monet. (Wymagania te mogą
+                            się różnić w zależności od edycji.)</li>
+                        <li data-i18n="informacje.li.5">Na początku można dodać maksymalnie 2 członków. (Limit ten może
+                            ulec zmianie w kolejnych
+                            edycjach.)
+                            Po zwiększeniu limitu liczby członków, możliwe jest zaproszenie większej liczby graczy.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <script src="translations.js"></script>
+</body>
+
+</html>
