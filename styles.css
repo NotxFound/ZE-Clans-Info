@@ -1,155 +1,148 @@
 :root {
-    --bg: #0e1116;
-    --fg: #e6e6e6;
-    --muted: #aab2c0;
-    --accent: #ff6b35;
-    --accent-2: #35c9ff;
-    --accent-3: #46ff35;
-    --card: #171b22;
-    --border: #242a34;
-}
-
-html,
-body {
-    background: var(--bg);
-    color: var(--fg);
-    font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    --bg-1: #0f1720;
+    --bg-2: #0b1220;
+    --accent: #f1c40f;
+    --muted: #9aa6b2;
 }
 
 * {
     box-sizing: border-box;
     margin: 0;
-    padding: 0;
+    padding: 0
 }
 
-a {
-    color: var(--accent-2);
-    text-decoration: none;
+html,
+body {
+    height: 100%
 }
 
-header {
-    padding: 48px 20px 12px;
-    text-align: center;
+body {
+    font-family: Inter, Segoe UI, Roboto, Arial, sans-serif;
+    background: linear-gradient(180deg, var(--bg-1), var(--bg-2));
+    color: #e6eef6;
+    line-height: 1.4;
 }
 
-header h1 {
-    margin: 0 0 8px;
-    font-size: 36px;
-    letter-spacing: 0.5px;
-}
 
-header p {
-    margin: 0;
-    color: var(--muted);
-}
-
-main {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 0 24px;
-}
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 8px;
-    margin: 18px 0 8px;
-}
-
-.card {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 12px 16px;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
-}
-
-.card h3 {
-    margin: 0 0 8px;
-    font-size: 18px;
-}
-
-.card p {
-    margin: 6px 0;
-    color: var(--muted);
-}
-
-ul {
-    margin: 10px 0 0;
-    padding-left: 18px;
-}
-
-li {
-    margin: 6px 0;
-}
-
-li::marker {
-    color: var(--accent-3);
-}
-
-.section {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 14px;
-    padding: 20px;
-    margin: 24px 0;
-}
-
-.section h2 {
-    margin: 0 0 10px;
-    font-size: 24px;
-    border-left: 4px solid var(--accent);
-    padding-left: 10px;
-}
-
-.row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 18px;
+.hero {
+    display: flex;
     align-items: center;
-    justify-items: center;
+    justify-content: center;
+    padding: 48px 20px;
+    min-height: calc(100dvh - 120px)
 }
 
-.row img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    border: 1px solid var(--border);
+.hero-content {
+    text-align: center;
+    max-width: 900px;
+    padding: 36px;
+    border-radius: 14px
 }
 
-.kbd {
-    background: #0c1118;
-    border: 1px solid #2b3442;
-    border-radius: 6px;
-    padding: 2px 6px;
-    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-    font-size: 0.95em;
+.logo {
+    width: 96px;
+    height: 96px;
+    border-radius: 14px;
+    display: block;
+    margin: 0 auto 16px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5)
 }
 
-.hint {
-    display: inline-block;
-    background: #10151c;
-    border: 1px dashed #334155;
+.title {
+    font-size: clamp(1.6rem, 4vw, 3rem);
+    color: #fff;
+    margin-bottom: 8px
+}
+
+.subtitle {
     color: var(--muted);
-    padding: 10px 12px;
+    font-size: 1.05rem;
+    margin-bottom: 20px
+}
+
+.cta {
+    display: inline-block;
+    background: linear-gradient(90deg, var(--accent), #ffd24a);
+    color: #0e0e0e;
+    padding: 12px 22px;
     border-radius: 10px;
-    font-size: 14px;
-    margin-top: 2px;
+    font-weight: 700;
+    text-decoration: none;
+    box-shadow: 0 10px 30px rgba(241, 196, 15, 0.18);
+    transition: transform .12s ease, box-shadow .12s
 }
 
-.info {
+.cta:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 18px 40px rgba(241, 196, 15, 0.22)
+}
+
+
+/* Links (GameTracker / Forum / Discord) */
+.links {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin-top: 18px;
+    flex-wrap: wrap
+}
+
+.link-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.03);
     color: var(--accent);
-    font-weight: bold;
+    text-decoration: none;
+    font-weight: 700;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+    transition: transform .12s, box-shadow .12s, opacity .12s
 }
 
-@media (max-width: 840px) {
-    .row {
-        grid-template-columns: 1fr;
+.link-item svg,
+.link-item i {
+    width: 20px;
+    height: 20px;
+    flex: 0 0 20px;
+    fill: currentColor;
+    font-size: 20px;
+    display: inline-block;
+}
+
+.link-item span {
+    display: inline-block
+}
+
+.link-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 48px rgba(0, 0, 0, 0.45);
+    opacity: 1
+}
+
+.link-item.discord {
+    background: linear-gradient(90deg, #5865F2, #6E7BFF);
+    color: #fff
+}
+
+.link-item.forum {
+    background: linear-gradient(90deg, #08a0ff, #00c4ff);
+    color: #fff
+}
+
+.link-item.gametracker {
+    background: linear-gradient(90deg, #ff6b00, #ffb86b);
+    color: #0e0e0e
+}
+
+
+@media (min-width:860px) {
+    .hero {
+        padding: 72px 20px
     }
-}
 
-#google_translate_element {
-    position: fixed;
-    bottom: 12px;
-    right: 12px;
+    .hero-content {
+        padding: 48px
+    }
 }
